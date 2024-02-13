@@ -1,3 +1,7 @@
+/* ********* */
+/* Hero */
+/* ********* */
+
 .hero {
   position: relative;
   display: flex;
@@ -39,6 +43,13 @@
   text-align: left;
 }
 
+.word-area a {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 7rem;
+}
+
 .hero-img {
   width: 300px;
   object-fit: cover;
@@ -46,3 +57,17 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
   margin-top: 200px;
 }
+
+/* ********* */
+/* Specials */
+/* ********* */
+
+
+/* ********* */
+/* About */
+/* ********* */
+
+
+/* ********* */
+/* Testimonials */
+/* ********* */
