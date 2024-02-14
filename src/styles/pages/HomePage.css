@@ -153,6 +153,19 @@
   -o-border-radius: 10px;
 }
 
+.order-confirmed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+
+}
+
 
 /* ********* */
 /* About */

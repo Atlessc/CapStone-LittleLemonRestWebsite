@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from '../Modal';
 
 const Specials = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
   const specials = [
     {
       imgPath: '/images/greekSalad.jpg',
@@ -36,10 +43,16 @@ const Specials = () => {
           <p>{special.price}</p>
           <p>{special.blurb}</p>
           </div>
-          <div className='button'>Order Now</div>
+          <div className='button' onClick={openModal}>Order Now</div>
         </div>
       ))}
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <div className='order-confirmed'>
+          <p>Order confirmed! Your food will be ready for pickup in 20 minutes.</p>
+        </div>
+      </Modal>
     </div>
   );
 };

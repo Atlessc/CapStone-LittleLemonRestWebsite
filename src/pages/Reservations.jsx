@@ -49,27 +49,27 @@ function Reservations() {
         <form onSubmit={handleFormSubmit}>
           <label>
             Name:
-            <input type="text" value={reservationData.mainName} onChange={handleNameChange} />
+            <input type="text" value={reservationData.mainName} onChange={handleNameChange} required />
           </label>
           <br />
           <label>
             Date:
-            <input type="date" value={reservationData.date} onChange={handleDateChange} />
+            <input type="date" value={reservationData.date} onChange={handleDateChange} required />
           </label>
           <br />
           <label>
             Time:
-            <input type="time" value={reservationData.time} onChange={handleTimeChange} />
+            <input type="time" value={reservationData.time} onChange={handleTimeChange} required />
           </label>
           <br />
           <label>
             Party Size:
-            <input type="number" value={reservationData.partySize} onChange={handlePartySizeChange} />
+            <input type="number" value={reservationData.partySize} onChange={handlePartySizeChange} required />
           </label>
           <br />
           <label>
             Occasion:
-            <select value={reservationData.occasion} onChange={handleOccasionChange}>
+            <select value={reservationData.occasion} onChange={handleOccasionChange} required>
               <option value="">Select an occasion</option>
               {occasions.map((occasion) => (
                 <option key={occasion} value={occasion}>
@@ -81,7 +81,7 @@ function Reservations() {
           <br />
           <button type="submit">Book Reservation</button>
         </form>
-      )};
+      )}
     </div>
   );
 }
